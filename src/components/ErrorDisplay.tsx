@@ -1,4 +1,3 @@
-// src/components/ErrorDisplay.tsx
 interface Props {
   message: string;
 }

@@ -1,4 +1,3 @@
-// src/components/Loading.tsx
 const Loading = () => (
   <div className="loading">
     <div className="spinner"></div>

@@ -1,4 +1,3 @@
-// src/pages/AnimeCatalog.tsx
 import { useState, useCallback } from 'react';
 import { fetchAnimeList } from '../services/shikimoriApi';
 import type { ShikimoriAnime } from '../types/anime';
@@ -126,7 +125,7 @@ const AnimeCatalog = () => {
           <button className="search-btn" onClick={handleSearch} disabled={loading}>
             Поиск
           </button>
-          {/* ⚠️ "Загрузить ещё" НЕ здесь */}
+          {/*"Загрузить ещё" НЕ здесь */}
         </div>
       </div>
 
@@ -159,7 +158,7 @@ const AnimeCatalog = () => {
         ))}
       </div>
 
-      {/* ✅ Кнопка "Загрузить ещё" — в самом низу */}
+      {/*Кнопка "Загрузить ещё" — в самом низу */}
       {hasMore && (
         <div className="load-more-container">
           <button

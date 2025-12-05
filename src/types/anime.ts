@@ -1,4 +1,3 @@
-// src/types/anime.ts
 export interface ShikimoriAnime {
   id: number;
   name: string;

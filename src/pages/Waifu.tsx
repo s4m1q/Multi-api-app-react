@@ -1,4 +1,3 @@
-// src/pages/Waifu.tsx
 import { useState } from 'react';
 import { fetchWaifuImages } from '../services/waifuApi';
 import type { WaifuImage } from '../types/waifu';
@@ -23,9 +22,7 @@ const Waifu = () => {
         is_nsfw: isNsfw,
       });
       if (newImages[0]) {
-        // Добавляем новое изображение в начало или конец
-        setImages(prev => [...prev, newImages[0]]); // в конец
-        // или: setImages(prev => [newImages[0], ...prev]); // в начало
+        setImages(prev => [...prev, newImages[0]]);
       }
     } catch (err: any) {
       setError(err.message || 'Не удалось загрузить изображение');

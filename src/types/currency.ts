@@ -1,5 +1,3 @@
-// src/types/currency.ts
-
 export interface ExchangeRateResponse {
   result: 'success' | 'error';
   conversion_rates: Record<string, number>;

@@ -1,4 +1,3 @@
-// src/pages/Currency.tsx
 import { useState, useEffect } from 'react';
 import { fetchExchangeRates } from '../services/currencyApi';
 import Loading from '../components/Loading';
