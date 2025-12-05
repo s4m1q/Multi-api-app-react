@@ -1,73 +1,54 @@
-# React + TypeScript + Vite
+# API-приложение: Курс валют, Аниме арты, Каталог аниме
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Добро пожаловать в API-приложение, где вы можете исследовать разные сервисы — от конвертации валют до поиска аниме и милых артов!
 
-Currently, two official plugins are available:
+Сайт доступен онлайн:  
+👉 **https://s4m1q.github.io/Multi-api-app-react**
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+---
 
-## React Compiler
+## ⚠️ Важно: использование API
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+Для корректной работы некоторых внешних API (в частности, **Shikimori** и **Waifu.im**) **требуется включённый VPN**.
 
-## Expanding the ESLint configuration
+Это связано с географическими ограничениями или блокировками на уровне провайдера.
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+✅ **Проверенная страна**: США.  
+❌ Многие страны Европы **не дают доступ** к этим API.
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+Рекомендуется запускать приложение с активным VPN-соединением, чтобы избежать ошибок загрузки данных.
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+---
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+## 👥 Авторы
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+Этот проект был создан студентами:
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+- **Денисов Александр**
+- **Сибатуллин Самир**
+- **Камалетдинов Тимур**
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+---
+
+## 🛠 Функционал
+
+Мы реализовали три основных модуля, используя внешние API:
+
+### 💱 Курс валют
+- Получает актуальные курсы валют в реальном времени.
+- Позволяет конвертировать сумму из одной валюты в другую.
+
+### 🎨 Аниме арты
+- Сборник изображений с милыми аниме-девочками.
+- Возможность фильтрации по тегам (`waifu`, `maid`, `marin-kitagawa`, `mori-calliope`, `raiden-shogun`, `oppai`, `selfies`, `uniform`, `kamisato-ayaka`).
+- Поиск по ключевым словам.
+- Просмотр в увеличенном режиме с детальной информацией и ссылкой на источник.
+- Также есть небезопасный поиск (NSFW), на который вы решаетесь заходить на свой страх и риск.
+
+### 📺 Аниме каталог
+- Поиск аниме через API Shikimori.
+- Фильтрация по году выпуска, статусу (запланировано, онгоинг, завершено).
+- Подробная карточка каждого аниме: рейтинг, описание, эпизоды, год, жанры.
+- Удобный просмотр в сетке с превью и оценкой.
+
+---
